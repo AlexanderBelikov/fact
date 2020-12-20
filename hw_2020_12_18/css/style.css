@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: 'FuturaPT',Arial,sans-serif;
+}
+header {
+    background: #0099cc;
+    color: #ffffff;
+    padding: 20px;
+    overflow:hidden;
+}
+.day_header {
+    background-image: url(../img/header_day.png);
+    background-position: center;
+    background-size: cover;
+}
+.night_header {
+    background-image: url(../img/header_night.png);
+    background-position: center;
+    background-size: cover;
+}
+header h1{
+    font-size: 20px;
+}
+main {
+    margin: 10px;
+}
+div {
+    border-bottom: 1px black solid;
+    padding: 10px 0;
+}
+p {
+    margin: 5px 10px;
+}
+.info {
+    display: grid;
+    grid-template-columns: min-content min-content;
+}
+.night, .day {
+    width: 591px;
+    height: 168px;
+    margin: 10px;
+}
+.night {
+    background-image: url(../img/night.png);
+}
+.day {
+    background-image: url(../img/day.png);
+}
