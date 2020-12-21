@@ -1,6 +1,13 @@
+html {
+    height: 100%;
+}
 body {
-    margin: 0;
+    margin: 0 auto;
+    max-width: 1280px;
+    min-height: 100%;
+    height: 1px;
     font-family: 'FuturaPT',Arial,sans-serif;
+    background-color: #e4e9ef;
 }
 header {
     background: #0099cc;
@@ -8,13 +15,13 @@ header {
     padding: 20px;
     overflow:hidden;
 }
-.day_header {
-    background-image: url(../img/header_day.png);
+.day {
+    background-image: url(../img/day.png);
     background-position: center;
     background-size: cover;
 }
-.night_header {
-    background-image: url(../img/header_night.png);
+.night {
+    background-image: url(../img/night.png);
     background-position: center;
     background-size: cover;
 }
@@ -22,7 +29,9 @@ header h1{
     font-size: 20px;
 }
 main {
-    margin: 10px;
+    margin: 0;
+    min-height: 100%;
+    background-color: white;
 }
 div {
     border-bottom: 1px black solid;
@@ -34,15 +43,4 @@ p {
 .about {
     display: grid;
     grid-template-columns: min-content min-content;
-}
-.night, .day {
-    width: 591px;
-    height: 168px;
-    margin: 10px;
-}
-.night {
-    background-image: url(../img/night.png);
-}
-.day {
-    background-image: url(../img/day.png);
 }
