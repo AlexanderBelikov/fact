@@ -10,7 +10,7 @@ if($task_id < $min_task_id || $task_id > $max_task_id) {
 
 include_once("tpl/header.tpl");
 include_once("tpl/navigation.tpl");
-include_once("tasks/task_$task_id.php");
+include_once("pages/task_$task_id.php");
 include_once("tpl/footer.tpl");
 
 ?>

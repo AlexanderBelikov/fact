@@ -5,15 +5,15 @@
     <label for="select_i" title="Выберите значение">Выберите значение</label>
     <select name="select_i" id="select_i" onchange="document.location='?task_id=3&i='+this.options[this.selectedIndex].value">
         <?
-        $v = (int)$_GET["i"];
-        if ($v < 0 || $v > 10){
-            $v=0;
+        $i = (int)$_GET["i"];
+        if ($i < 0 || $i > 10){
+            $i=0;
         }
-        foreach (range(0, 10) as $i) {
-            if ($v==$i){
-                echo "<option selected value='$i'>$i</option>";
+        foreach (range(0, 10) as $s) {
+            if ($i==$s){
+                echo "<option selected value='$s'>$s</option>";
             } else {
-                echo "<option value='$i'>$i</option>";
+                echo "<option value='$s'>$s</option>";
             }
         }
         ?>
@@ -24,7 +24,7 @@
         <h4>PHP</h4>
         <?
         $out_array = array();
-        $out_array = range(0,10-$v);
+        $out_array = range(0,10-$i);
         echo "<p>".implode(", ", $out_array)."</p>";
         ?>
     </div>

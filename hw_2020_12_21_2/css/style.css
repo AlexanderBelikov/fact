@@ -63,6 +63,7 @@ main {
     padding: 20px;
     margin: auto;
     width: fit-content;
+    width: -moz-fit-content;
     text-indent: 1.5em;
 }
 .task_data {
