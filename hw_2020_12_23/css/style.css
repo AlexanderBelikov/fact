@@ -1,0 +1,94 @@
+html {
+    height: 100%;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
+body {
+    margin: 0 auto;
+    max-width: 1280px;
+    min-height: 100%;
+    height: 1px;
+    font-family: 'FuturaPT',Arial,sans-serif;
+    background-color: #e4e9ef;
+}
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    background-color: white;
+}
+header {
+    background: #0099cc;
+    color: #ffffff;
+    padding: 20px 30px;
+    overflow:hidden;
+}
+header h1{
+    font-size: 20px;
+}
+main {
+    margin: 0;
+    padding: 0;
+}
+/* Navigation menu*/
+.nav__tasks>ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+}
+.nav__tasks ul {
+    list-style-type: none;
+    margin: 0;
+}
+.nav__tasks li {
+    flex: 1;
+    margin: 1px;
+    background-color: #0099cc;
+    alignment: center;
+}
+.nav__tasks a {
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    text-transform:capitalize;
+    text-decoration: none;
+}
+.nav__tasks a.active {
+    color: black;
+}
+/* Task text and data*/
+.task_text {
+    text-align: justify;
+    padding: 20px;
+    margin: auto;
+    width: fit-content;
+    width: -moz-fit-content;
+    text-indent: 1.5em;
+}
+.task_data {
+    text-align: center;
+}
+/* Task columns*/
+.div__task {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+}
+.div__task div {
+    flex: 1;
+}
+.div__task h4 {
+    text-align: center;
+}
+.div__task p {
+    text-align: center;
+}
+.div__task p {
+    margin: 5px;
+}
+.div__task ul {
+    list-style: none;
+    width: fit-content;
+    margin: 0 auto;
+}
