@@ -1,0 +1,55 @@
+html {
+    height: 100%;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
+body {
+    margin: 0 auto;
+    max-width: 1024px;
+    min-height: 100%;
+    height: 1px;
+    font-family: 'FuturaPT',Arial,sans-serif;
+    background-color: white;
+}
+.wrapper {
+    width: 100%;
+}
+.wrapper>div {
+    margin-top: 16px;
+    padding: 16px;
+    background-color: #e4e9ef;
+}
+
+.task_form {
+    max-width: fit-content;
+    margin: 0 auto;
+}
+.task_grid {
+    display: grid;
+    grid-template-columns: 30px 550px 30px 30px;
+    grid-auto-rows: auto;
+    grid-gap: 1px;
+    background: white;
+}
+.grid-item {
+    /*align-content: center;*/
+    display: flex;
+    align-items: center;
+    min-height: 30px;
+    background-color: #e4e9ef;
+    padding: 5px;
+}
+.item-green {
+    background: #e0ffc2;
+}
+.item-red {
+    background: #ffc7c7;
+}
+.radio-item {
+    margin: auto;
+}
+.task_form button {
+    width: 100%;
+    margin: 10px auto;
+    padding: 5px;
+}
