@@ -6,7 +6,6 @@ function is_auth(){
 function get_auth_login(){
     return $_SESSION['auth_user'];
 }
-//print_r($_POST);
 switch (strtolower($_POST['auth_action'])) {
     case 'login' : {
         unset($_SESSION['auth_user']);
@@ -36,9 +35,15 @@ switch (strtolower($_POST['auth_action'])) {
         break;
     }
 }
-if (is_auth()) {
-    if (isset($_SESSION[get_auth_login() . '_last_url'])) {
-        $last_url = $_SESSION[get_auth_login() . '_last_url'];
+
+if (isset($_POST['bc_id'])){
+    $bc_id = $_POST['bc_id'];
+    if (is_auth()) {
+        $_SESSION[get_auth_login().'_bc_id'] = $bc_id;
+    }
+} else {
+    if (is_auth() && isset($_SESSION[get_auth_login().'_bc_id'])) {
+        $bc_id = $_SESSION[get_auth_login().'_bc_id'];
     }
 }
 ?>
@@ -53,12 +58,12 @@ if (is_auth()) {
     <title>Document</title>
     <script type="text/javascript" src="js/md5.js"></script>
 </head>
-<body>
+<body <?php if(isset($bc_id)){echo 'class="bc_'.$bc_id.'"';}?> >
 <div class="wrapper">
     <div class="task_text">
-        К задаче с авторизацией добавить две страницы (fact.php, bitrix.php).
-        <br>Необходимо запоминать последнюю посещенную страницу (либо fact.php, либо bitrix.php).
-        <br>После авторизации пользователя, необходимо вывести на экран, какая страница была посещена последней.
+        Создайте список с выпадающим цветом. Задний фон сайта должен окрашиваться в выбранный цвет из списка.
+        <br>Если пользователе покинет сайт и заново войдет, нужно окрасить сайт в тот цвет,
+        <br>который был выбран последним.
     </div>
     <div class="task_code">
         <form class="task_form" action="" method="post" onsubmit="pwd_calc(this);">
@@ -86,11 +91,19 @@ if (is_auth()) {
                 <?php if (isset($last_url)){ echo "<label> Последняя посещенная страница $last_url</label>";} ?>
             </div>
         </form>
-        <h1>index</h1>
-        <p>Покликайте по ссылкам :)</p>
-        <a href="bitrix.php">bitrix</a>
-        <a href="about.php">about</a>
-        <a href="fact.php">fact</a>
+        <form action="" method="post">
+            <select name="bc_id" <?php if(isset($bc_id)){echo 'class="bc_'.$bc_id.'"';} ?> onchange="this.form.submit();">
+                <?php
+                    for ($i=1; $i<10; $i++){
+                        if(isset($bc_id) && $bc_id==$i){
+                            echo '<option value="'.$i.'" class="bc_'.$i.'" selected>'.$i.'</option>';
+                        } else {
+                            echo '<option value="'.$i.'" class="bc_'.$i.'">'.$i.'</option>';
+                        }
+                    }
+                ?>
+            </select>
+        </form>
     </div>
 </div>
 </body>
