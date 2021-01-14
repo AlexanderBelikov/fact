@@ -2,7 +2,7 @@
 $filename = "test.txt";
 $file = file_get_contents($filename);
 $tests_array = array();
-foreach (explode(PHP_EOL, $file) as $value) {
+foreach (preg_split('/\r\n|\r|\n/', $file) as $value) {
     $test_split = explode('.', $value, 2);
     $id = (int)($test_split[0]);
     $tests_array[$id] = $test_split[1];
