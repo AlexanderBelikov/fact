@@ -25,6 +25,5 @@
     <input type="text" name="answer" required>
     <input type="submit">
 </form>
-<a href="test_2.php">test_2</a>
 </body>
 </html>
