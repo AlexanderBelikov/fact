@@ -1,0 +1,44 @@
+html,
+body,
+main {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: 'FuturaPT',Arial,sans-serif;
+}
+main {
+    display:flex;
+}
+main form {
+    margin:auto;
+}
+
+.form-item {
+    text-align: center;
+    margin-top: 32px;
+    min-height: 50px;
+}
+input[type="text"],input[type="password"] {
+    border-radius: 8px;
+    font-size:24px;
+    padding: 10px;
+    text-align: center;
+}
+input:focus, button:focus{
+    outline: none;
+    border: 2px solid rgb(222, 0, 15);
+}
+input[type="submit"] {
+    border-radius: 8px;
+    font-size:22px;
+    padding: 8px 16px;
+    margin: auto;
+}
+input[type="submit"]:hover {
+    cursor:pointer;
+}
+form label {
+    font-size:24px;
+    color: white;
+}
