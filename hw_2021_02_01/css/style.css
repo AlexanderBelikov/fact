@@ -1,0 +1,21 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+    justify-content: center;
+    grid-column-gap: 5px;
+}
+img {
+    /*max-width: 600px;*/
+    max-width: 100%;
+    border: solid 1px #1e1630;
+}
+@media screen and (max-width: 1200px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+        margin: auto;
+        justify-content: center;
+        grid-column-gap: 5px;
+    }
+}
